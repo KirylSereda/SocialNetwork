@@ -1,25 +1,23 @@
 type AccordionPropsType = {
   titleValue: string;
-  collapsed: boolean
+  collapsed: boolean;
+  onChange: () => void
 };
 
 function Accordion(props: AccordionPropsType) {
-
-
   return <>
-    <AccordionTitle title={props.titleValue} />
+    <AccordionTitle title={props.titleValue} onChange={props.onChange} />
     {!props.collapsed && <AccordionBody />}
   </>
-
-
 }
 
 type AccordionTitlePropsType = {
   title: string;
+  onChange: () => void
 };
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-  return <h3>{props.title}</h3>;
+  return <h3 onClick={props.onChange}>{props.title}</h3>;
 }
 
 function AccordionBody() {
