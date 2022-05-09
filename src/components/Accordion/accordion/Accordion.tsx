@@ -1,9 +1,11 @@
 type AccordionPropsType = {
   titleValue: string;
-  collapsed: boolean;
+  collapsed: boolean
 };
 
 function Accordion(props: AccordionPropsType) {
+
+
   return <>
     <AccordionTitle title={props.titleValue} />
     {!props.collapsed && <AccordionBody />}
