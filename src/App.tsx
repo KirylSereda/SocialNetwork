@@ -1,17 +1,31 @@
 import { useState } from "react";
 import "./App.css";
-import Accordion from "./components/Accordion/accordion/Accordion";
-import { OnOff } from "./components/Accordion/onOff/onOff";
+import { Accordion } from "./components/Accordion/accordion/Accordion";
 import { UncontrolledOnOff } from "./components/Accordion/onOff/UncontrolledOnOff";
 import Rating from "./components/Accordion/Rating/Rating";
 import UncontrolleRating from "./components/Accordion/Rating/UncontrolledRating";
 
+export type UserType = {
+  id: number,
+  name: string
+}
 
 function App() {
 
   let [ratingValue, setRatingValue] = useState<number>(0)
   let [accordionCollapsed, setaccordionCollapsed] = useState<boolean>(false)
   let [switchOn, setSwitchOn] = useState(false)
+
+
+  const onClick = () => {
+    alert('Hi')
+  }
+  const users: UserType[] = [
+    { id: 1, name: 'Kiryll' },
+    { id: 2, name: 'Andry' },
+    { id: 3, name: 'Katya' }
+  ]
+
   return (
     <div className="App">
 
@@ -20,7 +34,10 @@ function App() {
 
       <Accordion titleValue={'Menu'}
         collapsed={accordionCollapsed}
-        onChange={() => setaccordionCollapsed(!accordionCollapsed)} />
+        items={users}
+        onChange={() => setaccordionCollapsed(!accordionCollapsed)}
+        onClick={onClick}
+      />
 
 
       {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
