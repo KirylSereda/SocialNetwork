@@ -17,7 +17,7 @@ export default {
   argTypes: {
     color: {
       control: 'color',
-      ...GetCategoryObj('color')
+      ...GetCategoryObj('Color')
     },
     onChange: {
       ...GetCategoryObj('Event')
@@ -36,7 +36,6 @@ export default {
     }
   }
 }
-
 
 const callback = action("accordion mode change event fired")
 const onClickCallback = action("some item was clicked")
