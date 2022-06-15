@@ -42,8 +42,8 @@ export const UncontrolledOnOff = (props: OnOffProps) => {
     }
 
     const offClicked = () => {
-        setOn(true)
-        props.onChange(true)
+        setOn(false)
+        props.onChange(false)
     }
 
     return (<div>
