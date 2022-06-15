@@ -1,6 +1,5 @@
 import { ChangeEvent, useRef, useState } from "react"
 
-import { action } from '@storybook/addon-actions'
 export default {
   title: 'Input',
   // component: //input
@@ -45,7 +44,7 @@ export const ConrilleCheckbox = () => {
 }
 
 export const ConrilleSelect = () => {
-  const [parentValue, setParentValue] = useState<null | string>(null)
+  const [parentValue, setParentValue] = useState<any>(null)
   const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setParentValue(e.currentTarget.value)
   }

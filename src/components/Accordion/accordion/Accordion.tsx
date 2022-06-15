@@ -16,7 +16,7 @@ export type AccordionPropsType = {
   /**
    *  optionak color of header text
    */
-  color?: string
+  color: string
 
 };
 
@@ -47,7 +47,7 @@ function AccordionBody(props: AccordionBodyPropsType) {
   return (
     <ul>
       {props.items.map((u) => {
-        return <li onClick={() => { props.onClick(u.name) }}>{u.name}</li>
+        return <li key={u.id} onClick={() => { props.onClick(u.name) }}>{u.name}</li>
       })}
     </ul>
   );

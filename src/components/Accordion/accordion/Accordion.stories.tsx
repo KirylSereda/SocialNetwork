@@ -77,6 +77,6 @@ ModeChanging.args = {
   { id: 3, name: 'Katya' }
   ],
   onClick: (value) => {
-    alert(`user with ID ${value} should be happe`)
+    alert(`user with ID ${value} should be happy`)
   }
 }

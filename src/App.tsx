@@ -22,7 +22,7 @@ function App() {
   }
   const users: UserType[] = [
     { id: 1, name: 'Kiryll' },
-    { id: 2, name: 'Andry' },
+    { id: 2, name: 'Andrya' },
     { id: 3, name: 'Katya' }
   ]
 
@@ -35,6 +35,7 @@ function App() {
       <Accordion titleValue={'Menu'}
         collapsed={accordionCollapsed}
         items={users}
+        color={'Red'}
         onChange={() => setaccordionCollapsed(!accordionCollapsed)}
         onClick={onClick}
       />
