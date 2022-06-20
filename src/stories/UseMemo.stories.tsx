@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import React from 'react'
 export default {
     title: 'Usememo',
@@ -65,7 +65,6 @@ export const HeplsToReactMemo = () => {
         setUsers(newUsers)
     }
 
-
     return <>
         <h3>{counter}</h3>
         <button onClick={() => setCounter(counter + 1)}>+</button>
@@ -73,3 +72,4 @@ export const HeplsToReactMemo = () => {
         <Users users={newArray} />
     </>
 }
+
