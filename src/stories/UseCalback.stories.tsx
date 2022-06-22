@@ -1,5 +1,10 @@
 import React, { useCallback, useMemo, useState } from "react"
 
+export default {
+    title: 'LikeuseCallback',
+}
+
+
 export const LikeUseCallback = () => {
     console.log('LikeUseCallback')
     const [counter, setCounter] = useState(0)
@@ -24,12 +29,12 @@ export const LikeUseCallback = () => {
     }, [books])
 
 
-    return <>
+    return <div>
         <h3>{counter}</h3>
         <button onClick={() => setCounter(counter + 1)}>+</button>
 
         <Book books={newArray} addBook={memoizedAddBook2} />
-    </>
+    </div>
 }
 
 const BooksSecret = (props: { books: Array<string>, addBook: () => void }) => {
