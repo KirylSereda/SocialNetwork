@@ -2,7 +2,7 @@ import { Accordion } from "./Accordion";
 import { action } from '@storybook/addon-actions'
 import { ComponentStory } from '@storybook/react';
 import { useState } from "react";
-
+import React from "react";
 const GetCategoryObj = (categoryName: string) => {
   return {
     table: {

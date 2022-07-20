@@ -1,3 +1,5 @@
+import React from "react";
+
 type RatingProps = {
   value: number;
   onClick: (value: number) => void

@@ -1,6 +1,6 @@
 import { useReducer, useState } from "react";
 import { reducer, TOGGLE_COLLAPSED } from "./reducer";
-
+import React from "react";
 type AccordionPropsType = {
   titleValue: string;
 };

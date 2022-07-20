@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import { Accordion } from "./components/Accordion/accordion/Accordion";
-import { UncontrolledOnOff } from "./components/Accordion/onOff/UncontrolledOnOff";
-import Rating from "./components/Accordion/Rating/Rating";
-import UncontrolleRating from "./components/Accordion/Rating/UncontrolledRating";
-
+import React from "react";
+import Rating from "./components/Rating/Rating";
+import UncontrolleRating from "./components/Rating/UncontrolledRating";
+import { Accordion } from "./components/Accordion/Accordion";
+import { UncontrolledOnOff } from "./components/onOff/UncontrolledOnOff";
+import { Clock } from "./components/Clock/Clock";
 export type UserType = {
   id: number,
   name: string
@@ -39,19 +40,8 @@ function App() {
         onChange={() => setaccordionCollapsed(!accordionCollapsed)}
         onClick={onClick}
       />
-
-
-      {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
       <UncontrolledOnOff onChange={setSwitchOn} />{switchOn.toString()}
-      {/* <UncontrolledAccordion titleValue={"Menu"} />  */}
 
-
-      {/* <Rating value={0} />
-      <Rating value={1} />
-      <Rating value={2} />
-      <Rating value={3} />
-      <Rating value={4} />
-      <Rating value={5} /> */}
     </div>
   );
 }

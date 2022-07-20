@@ -1,5 +1,6 @@
 import { ChangeEvent, useRef, useState } from "react"
-
+import React
+  from "react"
 export default {
   title: 'Input',
   // component: //input

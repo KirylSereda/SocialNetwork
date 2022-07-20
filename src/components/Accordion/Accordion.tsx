@@ -1,5 +1,6 @@
-import { UserType } from "../../../App";
 
+import React from "react";
+import { UserType } from "../../App";
 export type AccordionPropsType = {
   titleValue: string;
   collapsed: boolean;
